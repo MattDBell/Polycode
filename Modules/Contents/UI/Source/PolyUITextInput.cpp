@@ -2328,7 +2328,7 @@ void UITextInput::updateWordWrap(int lineStart, int lineEnd) {
 			wordWrapRangeEnd++;
 		}
 		
-		while(wordWrapLines[wordWrapRangeEnd].isWordWrap && wordWrapRangeEnd < wordWrapLines.size());
+		while(wordWrapRangeEnd < wordWrapLines.size() &&wordWrapLines[wordWrapRangeEnd].isWordWrap );
 		
 		wordWrapLines.erase(wordWrapLines.begin()+wordWrapRangeBegin, wordWrapLines.begin()+wordWrapRangeEnd);
 	}
